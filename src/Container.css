@@ -1,0 +1,21 @@
+.container {
+  width: 80vw;
+  color: #000000;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 20px 20px 30px black;
+  position: relative;
+  animation: floatAnimation 2s ease-in-out infinite; /* 2s duration, ease-in-out timing, and infinite loop */
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the floating height */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
