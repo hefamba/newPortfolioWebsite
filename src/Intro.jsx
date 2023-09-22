@@ -29,9 +29,10 @@ export default function Intro() {
         <Spacer />
         <Image
           borderRadius="200px"
-          boxSize="400px"
+          boxSize="350px"
           src="henry-headshot.jpg"
           alt="Henry Efamba"
+          boxShadow={'10px 15px 40px black'}
         />
       </Flex>
     </Box>

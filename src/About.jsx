@@ -9,18 +9,43 @@ export default function About() {
     <Box pt={50}>
       <Box className="container">
         <Flex justify={'space-evenly'}>
-          <Box>
-            <Image
-              boxSize="300px"
-              src="henry-headshot.jpg"
-              alt="Henry Efamba"
-            />
+          <Box
+            position="relative"
+            top="-20px"
+            left="20" // Adjust the overlap as needed
+          >
+            <Box>
+              <Image
+                border={'1px black solid'}
+                borderRadius={20}
+                boxSize="225px"
+                height="100%"
+                src="image2.jpg"
+                alt="Henry Efamba"
+              />
+            </Box>
+          </Box>
+          <Box
+            position="relative"
+            bottom="-40px"
+            right="30" // Adjust the overlap as needed
+          >
+            <Box>
+              <Image
+                border={'1px black solid'}
+                borderRadius={20}
+                boxSize="225px"
+                height="100%"
+                src="image1.jpg"
+                alt="Second Image"
+              />
+            </Box>
           </Box>
           <Box padding={20} style={{ width: '40vw' }}>
             <h1 style={{ color: 'rgb(36, 126, 72)' }}>About me</h1>
             <p>
               I'm a self-taught software engineer who is passionate about
-              sotfware development and cutting-edge technologies. With a
+              software development and cutting-edge technologies. With a
               relentless drive for learning and a creative mindset, I've honed
               my skills to craft captivating user experiences on the web. Here
               you'll discover a collection of projects that showcase my journey
