@@ -1,0 +1,13 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: 'center';
+  align-content: center;
+  /* border: 3px white solid; */
+  position: relative;
+  bottom: 30px;
+}
+
+.navLink {
+  color: whitesmoke;
+}
