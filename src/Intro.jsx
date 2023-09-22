@@ -8,8 +8,15 @@ export default function Intro() {
     <Box className="container">
       <Flex>
         <Box pr={20}>
-          <h1>Henry Efamba Jr</h1>
-          <h3>Software Engineer</h3>
+          <h1 style={{ color: 'rgb(36, 126, 72)' }}>Henry Efamba Jr</h1>
+          <h3>
+            <a href="https://git.io/typing-svg">
+              <img
+                src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=25&pause=1000&color=000000&center=true&vCenter=true&width=435&lines=Software+Engineer;React+Web+Developer"
+                alt="Typing SVG"
+              />
+            </a>
+          </h3>
           <p>
             I'm a self-taught software engineer who is passionate about sotfware
             development and cutting-edge technologies. With a relentless drive
