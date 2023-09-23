@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Box,
-  Button,
-} from '@chakra-ui/react';
+import { FormControl, FormLabel, Box, Button } from '@chakra-ui/react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
