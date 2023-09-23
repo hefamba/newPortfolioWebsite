@@ -1,18 +1,41 @@
 import { Outlet, NavLink } from 'react-router-dom';
+import { Link as ScrollLink, Element } from 'react-scroll';
+
 import './Nav.css';
-import { Flex } from '@chakra-ui/layout';
-import { space } from '@chakra-ui/styled-system';
+import { useEffect, useState } from 'react';
 
 export default function RootLayout() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Corrected: Remove the event listener in the cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once
+
   return (
-    <div className="root-layout">
+    <div className={`root-layout`}>
       <header
+        className={`${isSticky ? 'sticky-nav' : ''}`}
         style={{
           display: 'flex',
           justifyContent: 'space-evenly',
-          paddingTop: '20px',
+
+          backgroundColor: ' #002407',
+          borderRadius: '50px',
         }}>
-        <nav>
+        <nav style={{ paddingTop: '50px' }}>
           <h4>Henry.dev</h4>
           <div
             style={{
@@ -31,25 +54,44 @@ export default function RootLayout() {
                 listStyle: 'none',
               }}>
               <li>
-                <NavLink className="navLink" to="/">
+                <ScrollLink
+                  className="navLink"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  to="/">
                   Home
-                </NavLink>
+                </ScrollLink>
               </li>
               <li>
-                {' '}
-                <NavLink className="navLink" to="#about">
+                <ScrollLink
+                  className="navLink"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  to="about">
                   About
-                </NavLink>
+                </ScrollLink>
               </li>
               <li>
-                <NavLink className="navLink" to="#projects">
+                <ScrollLink
+                  className="navLink"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  to="projects">
                   Projects
-                </NavLink>
+                </ScrollLink>
               </li>
               <li>
-                <NavLink className="navLink" to="#contacts">
+                <ScrollLink
+                  className="navLink"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  to="contact">
                   Contact
-                </NavLink>
+                </ScrollLink>
               </li>
             </ul>
           </div>

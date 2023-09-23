@@ -8,7 +8,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
-import { Icon } from '@chakra-ui/react';
+
 import {
   Modal,
   ModalOverlay,
