@@ -11,3 +11,6 @@ nav {
 .navLink {
   color: whitesmoke;
 }
+.navLink:hover {
+  color: greenyellow;
+}

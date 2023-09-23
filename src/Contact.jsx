@@ -1,0 +1,19 @@
+import React from 'react';
+import './Container.css';
+import ContactForm from './ContactForm';
+import ContactLinks from './ContactLinks';
+import { Box, Flex } from '@chakra-ui/layout';
+
+export default function Contact() {
+  return (
+    <Box pt={50}>
+      <Box className="container">
+        <h1>Contact me!</h1>
+        <Flex justify={'space-evenly'}>
+          <ContactLinks />
+          <ContactForm />
+        </Flex>
+      </Box>
+    </Box>
+  );
+}
