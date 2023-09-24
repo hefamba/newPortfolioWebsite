@@ -10,6 +10,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
+import './link.css';
 
 import {
   Modal,
@@ -34,6 +35,7 @@ export default function ContactLinks() {
           <Link
             href="https://www.linkedin.com/in/henry-efamba-jr-b298138a/"
             color={'green'}
+            className="contactLink"
             isExternal>
             <Text style={{ fontSize: '2rem' }}>
               LinkedIn {<Icon as={FaExternalLinkAlt} />}
@@ -42,7 +44,8 @@ export default function ContactLinks() {
           <Link
             href="https://github.com/hefamba#from-nutritionist-to-software-engineer-my-journey"
             isExternal
-            color={'green'}>
+            color={'green'}
+            className="contactLink">
             <Text
               style={{
                 fontSize: '2rem',
@@ -55,12 +58,13 @@ export default function ContactLinks() {
           <Link
             isExternal
             color={'green'}
-            href="mailto:efambajr.henry@gmail.com">
+            href="mailto:efambajr.henry@gmail.com"
+            className="contactLink">
             <Text style={{ fontSize: '2rem', paddingRight: '20px' }}>
               efambajr.henry@gmail.com {<Icon as={FaMailchimp} />}
             </Text>
           </Link>
-          <Link href="tel:+18322648788" color={'green'}>
+          <Link href="tel:+18322648788" color={'green'} className="contactLink">
             <Text style={{ fontSize: '2rem' }}>
               +1(832) 264-8788 {<Icon as={FaPhoneAlt} />}
             </Text>

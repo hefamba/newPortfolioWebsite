@@ -14,6 +14,7 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
+import './ButtonCards.css';
 
 export default function Cards() {
   const cardData = [
@@ -44,10 +45,15 @@ export default function Cards() {
   ];
 
   return (
-    <Box pt={50}>
+    <Box
+      pt={50}
+      style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap' }}>
       <h1>Projects</h1>
       <SimpleGrid
-        style={{ display: 'flex', justifyContent: 'space-between' }}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+        }}
         spacing={4}
         templateColumns="repeat(auto-fill, minmax(200px, 1fr))">
         {cardData.map((card, index) => (
@@ -84,17 +90,23 @@ export default function Cards() {
                   display: 'flex',
                   justifyContent: 'space-between',
                 }}>
-                <Link href={card.codeLink}>
+                <Link href={card.codeLink} color="red.300">
                   <Button
                     pl={10}
-                    style={{ backgroundColor: 'rgb(36, 126, 72)' }}
+                    className="btnCards"
+                    style={{
+                      backgroundColor: 'rgb(36, 126, 72)',
+                    }}
                     leftIcon={<FaCode />}>
                     Code
                   </Button>
                 </Link>
-                <Link href={card.demoLink}>
+                <Link href={card.demoLink} style={{ color: 'grey' }}>
                   <Button
-                    style={{ backgroundColor: 'rgb(36, 126, 72)' }}
+                    className="btnCards"
+                    style={{
+                      backgroundColor: 'rgb(36, 126, 72)',
+                    }}
                     leftIcon={<FaExternalLinkAlt />}>
                     Live Demo
                   </Button>

@@ -8,8 +8,8 @@ import { Element } from 'react-scroll';
 export default function Contact() {
   return (
     <Element name="contact">
-      <Box pt={50}>
-        <Box className="container">
+      <Box pt={50} pb={50}>
+        <Box className="container" p={1}>
           <h1>Contact me!</h1>
           <Flex justify={'space-evenly'}>
             <ContactLinks />

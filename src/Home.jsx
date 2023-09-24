@@ -6,7 +6,13 @@ import Contact from './Contact';
 
 export default function Home() {
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
       <Intro />
       <About />
       <Projects />

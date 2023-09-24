@@ -1,0 +1,21 @@
+.btnCards:hover {
+  color: grey;
+  background-color: grey;
+  outline: none;
+  outline-color: green;
+  outline-offset: none;
+}
+.btnCards {
+  box-shadow: 5px 5px 10px black;
+}
+
+.btnCards:focus {
+  transform: scale(0.98);
+  outline: none;
+  outline-offset: none;
+}
+
+.btnCards:active {
+  outline: none;
+  outline-offset: none;
+}
