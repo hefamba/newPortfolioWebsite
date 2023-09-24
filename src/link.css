@@ -1,3 +1,9 @@
 .contactLink:hover {
   color: grey;
 }
+
+@media (max-width: 878px) {
+  .contactLink {
+    font-size: 10px;
+  }
+}

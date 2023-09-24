@@ -1,5 +1,6 @@
 import React from 'react';
 import './Container.css';
+import './Intro.css';
 import { Image, Box, Flex, Spacer } from '@chakra-ui/react';
 import TechStackIcons from './TechStackIcons';
 import { Element } from 'react-scroll';
@@ -9,9 +10,11 @@ export default function Intro() {
     <Element name="/">
       <Box pt={40}>
         <Box className="container" id="intro">
-          <Flex>
-            <Box pr={20}>
-              <h1 style={{ color: 'rgb(36, 126, 72)' }}>Henry Efamba Jr</h1>
+          <Flex wrap={'wrap'}>
+            <Box pr={10} className="content">
+              <h1 style={{ color: 'rgb(36, 126, 72)' }} className="title">
+                Henry Efamba Jr
+              </h1>
               <h3
                 style={{
                   position: 'relative',
@@ -24,11 +27,13 @@ export default function Intro() {
                   />
                 </a>
               </h3>
-              <h3 style={{ position: 'relative', bottom: '1.5rem' }}>
+              <h3
+                className="mini-bio"
+                style={{ position: 'relative', bottom: '1.5rem' }}>
                 Software Engineer, Excited about technology, Creative Content
                 Creator
               </h3>
-              <h2>Tech Stack:</h2>
+              <h2 className="techStack">Tech Stack:</h2>
               <Flex justify={'center'}>
                 <TechStackIcons />
               </Flex>
@@ -36,7 +41,7 @@ export default function Intro() {
             <Spacer />
             <Image
               borderRadius="200px"
-              boxSize="350px"
+              boxSize="30%"
               src="henry-headshot.jpg"
               alt="Henry Efamba"
               boxShadow={'10px 15px 40px black'}

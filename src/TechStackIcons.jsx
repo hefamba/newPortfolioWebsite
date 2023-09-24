@@ -1,14 +1,6 @@
 import React from 'react';
 import { Icon } from '@chakra-ui/icon';
-import {
-  FaCode,
-  FaCss3,
-  FaExternalLinkAlt,
-  FaGithub,
-  FaHtml5,
-  FaJsSquare,
-  FaReact,
-} from 'react-icons/fa';
+import { FaCss3, FaGithub, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
 import { SiTypescript } from 'react-icons/si';
 
 export default function TechStackIcons() {
@@ -23,7 +15,7 @@ export default function TechStackIcons() {
   return (
     <div>
       {icons.map((icon) => {
-        return <Icon as={icon.title} boxSize={40} />;
+        return <Icon className="techStack" as={icon.title} boxSize={40} />;
       })}
     </div>
   );

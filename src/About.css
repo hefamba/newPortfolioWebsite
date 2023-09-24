@@ -1,0 +1,10 @@
+@media (max-width: 878px) {
+  .box {
+    position: relative;
+    left: 20px;
+  }
+
+  .imageBox {
+    box-sizing: content-box;
+  }
+}

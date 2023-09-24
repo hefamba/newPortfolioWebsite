@@ -28,7 +28,10 @@ import { FaExternalLinkAlt, FaMailchimp, FaPhoneAlt } from 'react-icons/fa';
 
 export default function ContactLinks() {
   return (
-    <Box style={{ width: '50vw' }}>
+    <Box
+      style={{
+        width: '50%',
+      }}>
       <h2>Contact Links</h2>
       <Box>
         <Flex justify={'space-evenly'} flexWrap={'wrap'}>
@@ -37,7 +40,7 @@ export default function ContactLinks() {
             color={'green'}
             className="contactLink"
             isExternal>
-            <Text style={{ fontSize: '2rem' }}>
+            <Text style={{ fontSize: '18px' }}>
               LinkedIn {<Icon as={FaExternalLinkAlt} />}
             </Text>
           </Link>
@@ -48,7 +51,7 @@ export default function ContactLinks() {
             className="contactLink">
             <Text
               style={{
-                fontSize: '2rem',
+                fontSize: '18px',
                 paddingRight: '30px',
                 paddingLeft: '30px',
               }}>
@@ -60,12 +63,12 @@ export default function ContactLinks() {
             color={'green'}
             href="mailto:efambajr.henry@gmail.com"
             className="contactLink">
-            <Text style={{ fontSize: '2rem', paddingRight: '20px' }}>
+            <Text style={{ fontSize: '18px', paddingRight: '20px' }}>
               efambajr.henry@gmail.com {<Icon as={FaMailchimp} />}
             </Text>
           </Link>
           <Link href="tel:+18322648788" color={'green'} className="contactLink">
-            <Text style={{ fontSize: '2rem' }}>
+            <Text style={{ fontSize: '18px' }}>
               +1(832) 264-8788 {<Icon as={FaPhoneAlt} />}
             </Text>
           </Link>

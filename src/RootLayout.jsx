@@ -47,12 +47,13 @@ export default function RootLayout() {
               position: 'relative',
               top: '-2px',
             }}>
-            <h4>Henry.dev</h4>
-            <div>
+            <h4 className="henry-dev">Henry.dev</h4>
+            <div style={{ width: '100%' }}>
               <ul
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
+
                   width: '30vw',
                   listStyle: 'none',
                   cursor: 'pointer',

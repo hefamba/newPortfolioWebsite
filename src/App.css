@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 #root {
+  width: 100%;
   margin: 0 auto;
-
   text-align: center;
   box-sizing: border-box;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
@@ -11,19 +11,7 @@
 
 body {
   background: linear-gradient(60deg, rgb(36, 126, 72), #000000, #5d5d5d);
-  min-height: 100vh;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }

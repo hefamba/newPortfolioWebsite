@@ -1,0 +1,29 @@
+@media (max-width: 878px) {
+  .title {
+    font-size: 2rem;
+  }
+  .mini-bio {
+    font-size: 0.5rem;
+  }
+  #intro {
+    position: relative;
+    left: 25px;
+  }
+
+  .content {
+    position: relative;
+    right: 95px;
+  }
+
+  .techStack {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 518px) {
+  #intro {
+    width: 260px;
+    position: relative;
+    left: 10px;
+  }
+}

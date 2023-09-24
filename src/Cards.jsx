@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 import './Container.css';
 import './Cards.css';
 import {
@@ -19,6 +20,7 @@ import './ButtonCards.css';
 export default function Cards() {
   const cardData = [
     {
+      id: uuid(),
       title: 'Virtural Resume',
       image: 'obiResume.jpg',
       text: 'Created a Resume website for one of my close friends to help him stick out in job applications. A simple project that gave me the opportunity to experiment building using React.js, and google css framework Material UI.',
@@ -27,6 +29,7 @@ export default function Cards() {
       techStack: 'JavaScript, React, Material UI',
     },
     {
+      id: uuid(),
       title: 'DreamLoud Gaming',
       image: 'Dreamloud.jpg',
       text: "Created a website based on a fictional gaming organization DreamLoud. I'm a big fan of competitive esports which gave me the inspiration. This serves as website for the org that gives information about DreamLoud and it's members. Also has a shop with for fans of DreamLoud to buy Merchandise. Created with HTML5 and Bootstrap. VSCode as my text editor and all code was pushed to Github.",
@@ -35,6 +38,7 @@ export default function Cards() {
       techStack: 'HTML, CSS, JavaScript, Bootstrap',
     },
     {
+      id: uuid(),
       title: 'MovieApp',
       image: 'movieApp.jpg',
       text: 'The Movie Search App is a web application that allows users to search for movies and view information about them. Users can search for movies by title, and the app will display a list of matching movies, including details such as the movie title, poster, overview, and rating.',
@@ -45,21 +49,20 @@ export default function Cards() {
   ];
 
   return (
-    <Box
-      pt={50}
-      style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap' }}>
+    <Box pt={50} style={{ display: 'flex', flexDirection: 'column' }}>
       <h1>Projects</h1>
       <SimpleGrid
+        className="grid"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
         }}
         spacing={4}
         templateColumns="repeat(auto-fill, minmax(200px, 1fr))">
-        {cardData.map((card, index) => (
-          <Box>
+        {cardData.map((card) => (
+          <Box style={{ display: 'flex' }}>
             <Card
-              key={index}
+              key={card.id}
               className="cardAnimation"
               width={'80%'}
               style={{
