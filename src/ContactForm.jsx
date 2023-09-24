@@ -18,8 +18,28 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform form submission logic here, such as sending the data to a server or performing client-side validation.
-    console.log(formData);
+
+    const emailData = {
+      to: 'efambajr.henry@gmail.com',
+      subject: 'Contact Form Submission',
+      body: `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`,
+    };
+
+    // Send email using SMTP.js
+    Email.send({
+      //   SecureToken: 'your-smtpjs-secure-token',
+      To: emailData.to,
+      From: 'your-email@example.com',
+      Subject: emailData.subject,
+      Body: emailData.body,
+    }).then(
+      () => {
+        console.log('Email sent successfully.');
+      },
+      (error) => {
+        console.error('Error sending email:', error);
+      }
+    );
   };
 
   return (
@@ -67,7 +87,8 @@ export default function ContactForm() {
       <Button
         type="submit"
         style={{ backgroundColor: 'rgb(36, 126, 72)' }}
-        width={'50%'}>
+        width={'50%'}
+        onClick={handleSubmit}>
         Submit
       </Button>
     </FormControl>

@@ -31,11 +31,13 @@ export default function RootLayout() {
         style={{
           display: 'flex',
           justifyContent: 'space-evenly',
-
+          alignContent: 'center',
+          alignItems: 'center',
+          width: '99%',
           backgroundColor: ' #002407',
           borderRadius: '50px',
         }}>
-        <nav style={{ paddingTop: '50px' }}>
+        <nav style={{ paddingTop: '50px', cursor: 'pointer' }}>
           <h4>Henry.dev</h4>
           <div
             style={{

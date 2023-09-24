@@ -1,10 +1,12 @@
 import {
   Box,
   Flex,
+  Icon,
   Link,
   Radio,
   RadioGroup,
   Stack,
+  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
@@ -20,75 +22,50 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import React from 'react';
+import { FaExternalLinkAlt, FaMailchimp, FaPhoneAlt } from 'react-icons/fa';
 // Import the Lorem component
-
-function ScrollingExample() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = React.useState('outside');
-
-  const btnRef = React.useRef(null);
-
-  return (
-    <div>
-      <RadioGroup value={scrollBehavior} onChange={setScrollBehavior}>
-        <Box direction="row">
-          <Radio value="outside">outside</Radio>
-        </Box>
-      </RadioGroup>
-
-      <Button mt={3} ref={btnRef} onClick={onOpen}>
-        Trigger modal
-      </Button>
-
-      <Modal
-        onClose={onClose}
-        finalFocusRef={btnRef}
-        isOpen={isOpen}
-        scrollBehavior={scrollBehavior}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis a
-            suscipit accusamus autem rem iusto!
-          </ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </div>
-  );
-}
 
 export default function ContactLinks() {
   return (
     <Box style={{ width: '50vw' }}>
       <h2>Contact Links</h2>
       <Box>
-        <Flex justify={'space-evenly'}>
+        <Flex justify={'space-evenly'} flexWrap={'wrap'}>
           <Link
             href="https://www.linkedin.com/in/henry-efamba-jr-b298138a/"
+            color={'green'}
             isExternal>
-            LINKEDIN
+            <Text style={{ fontSize: '2rem' }}>
+              LinkedIn {<Icon as={FaExternalLinkAlt} />}
+            </Text>
           </Link>
           <Link
             href="https://github.com/hefamba#from-nutritionist-to-software-engineer-my-journey"
-            isExternal>
-            GITHUB
+            isExternal
+            color={'green'}>
+            <Text
+              style={{
+                fontSize: '2rem',
+                paddingRight: '30px',
+                paddingLeft: '30px',
+              }}>
+              Github {<Icon as={FaExternalLinkAlt} />}
+            </Text>
           </Link>
           <Link
-            href="https://github.com/hefamba#from-nutritionist-to-software-engineer-my-journey"
-            isExternal>
-            📧 efambajr.henry@gmail.com
+            isExternal
+            color={'green'}
+            href="mailto:efambajr.henry@gmail.com">
+            <Text style={{ fontSize: '2rem', paddingRight: '20px' }}>
+              efambajr.henry@gmail.com {<Icon as={FaMailchimp} />}
+            </Text>
+          </Link>
+          <Link href="tel:+18322648788" color={'green'}>
+            <Text style={{ fontSize: '2rem' }}>
+              +1(832) 264-8788 {<Icon as={FaPhoneAlt} />}
+            </Text>
           </Link>
         </Flex>
-      </Box>
-      <Box>
-        <h2>Resume:</h2>
-        {/* Render the ScrollingExample component here */}
-        <ScrollingExample />
       </Box>
     </Box>
   );

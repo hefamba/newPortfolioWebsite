@@ -11,40 +11,33 @@ import {
   Text,
   Button,
   Icon,
+  Link,
 } from '@chakra-ui/react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function Cards() {
   const cardData = [
     {
-      title: 'MovieApp',
-      image: 'movieApp.jpg',
-      text: 'The Movie Search App is a web application that allows users to search for movies and view information about them. Users can search for movies by title, and the app will display a list of matching movies, including details such as the movie title, poster, overview, and rating.',
-      codeLink: 'https://github.com/hefamba/movieAppJs/edit/main/README.md',
-      demoLink: 'https://hefamba.github.io/movieAppJs/',
-      techStack: 'HTML, CSS, JavaScript',
+      title: 'Virtural Resume',
+      image: 'obiResume.jpg',
+      text: 'Created a Resume website for one of my close friends to help him stick out in job applications. A simple project that gave me the opportunity to experiment building using React.js, and google css framework Material UI.',
+      codeLink: 'https://github.com/hefamba/obinna_resume-netlify',
+      demoLink: 'https://resume-obinna-i.netlify.app/',
+      techStack: 'JavaScript, React, Material UI',
+    },
+    {
+      title: 'DreamLoud Gaming',
+      image: 'Dreamloud.jpg',
+      text: "Created a website based on a fictional gaming organization DreamLoud. I'm a big fan of competitive esports which gave me the inspiration. This serves as website for the org that gives information about DreamLoud and it's members. Also has a shop with for fans of DreamLoud to buy Merchandise. Created with HTML5 and Bootstrap. VSCode as my text editor and all code was pushed to Github.",
+      codeLink: 'https://github.com/hefamba/DreamLoud_Gaming',
+      demoLink: 'https://hefamba.github.io/DreamLoud_Gaming/',
+      techStack: 'HTML, CSS, JavaScript, Bootstrap',
     },
     {
       title: 'MovieApp',
       image: 'movieApp.jpg',
       text: 'The Movie Search App is a web application that allows users to search for movies and view information about them. Users can search for movies by title, and the app will display a list of matching movies, including details such as the movie title, poster, overview, and rating.',
-      codeLink: 'https://github.com/hefamba/movieAppJs/edit/main/README.md',
-      demoLink: 'https://hefamba.github.io/movieAppJs/',
-      techStack: 'HTML, CSS, JavaScript',
-    },
-    {
-      title: 'MovieApp',
-      image: 'movieApp.jpg',
-      text: 'The Movie Search App is a web application that allows users to search for movies and view information about them. Users can search for movies by title, and the app will display a list of matching movies, including details such as the movie title, poster, overview, and rating.',
-      codeLink: 'https://github.com/hefamba/movieAppJs/edit/main/README.md',
-      demoLink: 'https://hefamba.github.io/movieAppJs/',
-      techStack: 'HTML, CSS, JavaScript',
-    },
-    {
-      title: 'MovieApp',
-      image: 'movieApp.jpg',
-      text: 'The Movie Search App is a web application that allows users to search for movies and view information about them. Users can search for movies by title, and the app will display a list of matching movies, including details such as the movie title, poster, overview, and rating.',
-      codeLink: 'https://github.com/hefamba/movieAppJs/edit/main/README.md',
+      codeLink: 'https://github.com/hefamba/movieAppJs',
       demoLink: 'https://hefamba.github.io/movieAppJs/',
       techStack: 'HTML, CSS, JavaScript',
     },
@@ -91,17 +84,21 @@ export default function Cards() {
                   display: 'flex',
                   justifyContent: 'space-between',
                 }}>
-                <Button
-                  pl={10}
-                  style={{ backgroundColor: 'rgb(36, 126, 72)' }}
-                  leftIcon={<FaCode />}>
-                  Code
-                </Button>
-                <Button
-                  style={{ backgroundColor: 'rgb(36, 126, 72)' }}
-                  leftIcon={<FaExternalLinkAlt />}>
-                  Live Demo
-                </Button>
+                <Link href={card.codeLink}>
+                  <Button
+                    pl={10}
+                    style={{ backgroundColor: 'rgb(36, 126, 72)' }}
+                    leftIcon={<FaCode />}>
+                    Code
+                  </Button>
+                </Link>
+                <Link href={card.demoLink}>
+                  <Button
+                    style={{ backgroundColor: 'rgb(36, 126, 72)' }}
+                    leftIcon={<FaExternalLinkAlt />}>
+                    Live Demo
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           </Box>

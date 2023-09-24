@@ -13,7 +13,7 @@ export default function Contact() {
           <h1>Contact me!</h1>
           <Flex justify={'space-evenly'}>
             <ContactLinks />
-            <ContactForm />
+            {/* <ContactForm /> */}
           </Flex>
         </Box>
       </Box>
