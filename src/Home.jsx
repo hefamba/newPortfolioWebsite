@@ -5,6 +5,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import LoadingSpinner from './LoadingSpinner';
 import { Box, Flex } from '@chakra-ui/layout';
+import './App.css';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +29,7 @@ export default function Home() {
         <LoadingSpinner />
       ) : (
         <>
-          <Box>
+          <Box className="content-container">
             <Flex direction={'column'} justify={'center'} align={'center'}>
               <Intro />
               <About />
