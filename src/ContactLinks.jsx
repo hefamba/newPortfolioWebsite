@@ -67,7 +67,7 @@ export default function ContactLinks() {
               efambajr.henry@gmail.com {<Icon as={FaMailchimp} />}
             </Text>
           </Link>
-          <Link href="tel:+18322648788" color={'green'} className="phone">
+          <Link href="tel:+18322648788" color={'green'} className="contactLink">
             <Text style={{ fontSize: '18px' }}>
               +1(832) 264-8788 {<Icon as={FaPhoneAlt} />}
             </Text>
