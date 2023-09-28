@@ -16,6 +16,15 @@ body {
   overflow-x: hidden;
 }
 
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+.content-container {
+  width: fit-content;
+}
+
 /* Default styles for smaller screens */
 /* Adjust your styles for smaller screens here */
 

@@ -1,7 +1,13 @@
 import React from 'react';
 import { Icon } from '@chakra-ui/icon';
 import { FaCss3, FaGithub, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
+import {
+  SiBootstrap,
+  SiChakraui,
+  SiFirebase,
+  SiGithub,
+  SiTypescript,
+} from 'react-icons/si';
 
 export default function TechStackIcons() {
   const icons = [
@@ -10,12 +16,15 @@ export default function TechStackIcons() {
     { title: FaJsSquare },
     { title: FaReact },
     { title: SiTypescript },
-    { title: FaGithub },
+    { title: SiFirebase },
+    { title: SiGithub },
+    { title: SiBootstrap },
+    { title: SiChakraui },
   ];
   return (
     <div>
       {icons.map((icon) => {
-        return <Icon className="techStack" as={icon.title} boxSize={40} />;
+        return <Icon className="techStack" as={icon.title} boxSize={30} />;
       })}
     </div>
   );
