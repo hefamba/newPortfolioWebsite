@@ -38,7 +38,7 @@ export default function About() {
                 />
               </Box>
             </Box>
-            <Box padding={10} style={{ width: '40vw' }}>
+            <Box className="pBox" padding={10} style={{ width: '40vw' }}>
               <h1 style={{ color: 'rgb(36, 126, 72)' }}>About me</h1>
               <p>
                 I'm a self-taught software engineer who is passionate about

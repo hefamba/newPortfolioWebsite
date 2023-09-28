@@ -37,6 +37,9 @@ export default function Home() {
               <Contact />
             </Flex>
           </Box>
+          <footer>
+            <h3>Portfolio Website created with React+Vite and Chakra-UI</h3>
+          </footer>
         </>
       )}
     </div>

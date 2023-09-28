@@ -5,5 +5,12 @@
 @media (max-width: 878px) {
   .contactLink {
     font-size: 10px;
+    padding-left: 15px;
+  }
+
+  .phone {
+    width: 100vw;
+
+    display: inline-block;
   }
 }

@@ -10,7 +10,7 @@ export default function RootLayout() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -19,11 +19,10 @@ export default function RootLayout() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Corrected: Remove the event listener in the cleanup function
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array to ensure the effect runs only once
+  }, []);
 
   return (
     <Box width={'100%'}>
