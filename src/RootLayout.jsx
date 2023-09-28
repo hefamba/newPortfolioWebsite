@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from 'react-router-dom';
 import { Link as ScrollLink, Element } from 'react-scroll';
-
+import './App.css';
 import './Nav.css';
 import { useEffect, useState } from 'react';
 import { Box } from '@chakra-ui/layout';
@@ -101,7 +101,7 @@ export default function RootLayout() {
             </div>
           </nav>
         </header>
-        <main>
+        <main className="fade-in">
           <Outlet />
         </main>
       </div>

@@ -6,6 +6,7 @@ import {
   SiChakraui,
   SiFirebase,
   SiGithub,
+  SiMui,
   SiTypescript,
 } from 'react-icons/si';
 
@@ -20,6 +21,7 @@ export default function TechStackIcons() {
     { title: SiGithub },
     { title: SiBootstrap },
     { title: SiChakraui },
+    { title: SiMui },
   ];
   return (
     <div>
