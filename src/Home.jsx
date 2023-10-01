@@ -11,10 +11,9 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading by adding a delay
     setTimeout(() => {
-      setIsLoading(false); // Set isLoading to false when loading is complete
-    }, 1000); // Adjust the delay as needed
+      setIsLoading(false);
+    }, 1000);
   }, []);
 
   return (
