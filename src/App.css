@@ -25,22 +25,15 @@ body {
   width: fit-content;
 }
 
-/* Default styles for smaller screens */
-/* Adjust your styles for smaller screens here */
-
-/* Media query for screens with a minimum width of 1200px */
 @media (min-width: 1200px) {
-  /* Styles for larger screens */
   .content-container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto; /* Center the content container on larger screens */
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
-/* Media query for screens with a minimum width of 1600px */
 @media (min-width: 1600px) {
-  /* Additional styles for even larger screens */
   .content-container {
-    max-width: 1600px; /* Adjust as needed */
+    max-width: 1600px;
   }
 }
