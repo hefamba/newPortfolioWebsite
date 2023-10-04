@@ -19,11 +19,11 @@
 .image-1 {
   position: absolute;
   top: 100px;
-  left: -50px; /* Adjust the amount of overlap as needed */
+  left: -50px;
 }
 
 .image-2 {
   position: absolute;
   top: 0;
-  right: -20px; /* Adjust the amount of overlap as needed */
+  right: -20px;
 }
