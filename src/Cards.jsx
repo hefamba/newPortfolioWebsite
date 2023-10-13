@@ -24,8 +24,8 @@ export default function Cards() {
       title: 'Evolve Fitness',
       image: 'newEvolveFitness.jpg',
       text: "A responsive React web application built using Vite, Tailwind CSS, and other packages to promote a women's gym. This website showcases the various classes offered by the gym and provides contact information for potential customers.",
-      codeLink: 'https://github.com/hefamba/movieAppJs',
-      demoLink: 'https://hefamba.github.io/movieAppJs/',
+      codeLink: 'https://github.com/hefamba/evolveGymProject',
+      demoLink: 'https://evolvewomensgym.netlify.app/',
       techStack: 'Typescript, React, Tailwind',
     },
     {
