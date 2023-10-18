@@ -14,7 +14,6 @@ body {
   background: linear-gradient(60deg, rgb(36, 126, 72), #000000, #5d5d5d);
   min-height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .fade-in {

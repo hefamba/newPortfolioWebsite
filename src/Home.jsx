@@ -5,6 +5,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import LoadingSpinner from './LoadingSpinner';
 import { Box, Flex } from '@chakra-ui/layout';
+import { Container } from '@chakra-ui/react';
 import './App.css';
 
 export default function Home() {
@@ -28,14 +29,14 @@ export default function Home() {
         <LoadingSpinner />
       ) : (
         <>
-          <Box className="content-container">
+          <Container maxW="1300px">
             <Flex direction={'column'} justify={'center'} align={'center'}>
               <Intro />
               <About />
               <Projects />
               <Contact />
             </Flex>
-          </Box>
+          </Container>
 
           <footer>
             <h3>Portfolio Website created with React+Vite and Chakra-UI</h3>

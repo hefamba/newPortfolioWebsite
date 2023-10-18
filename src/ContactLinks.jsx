@@ -1,30 +1,7 @@
-import {
-  Box,
-  Flex,
-  Icon,
-  Link,
-  Radio,
-  RadioGroup,
-  Stack,
-  Text,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { Button } from '@chakra-ui/react';
+import { Box, Flex, Icon, Link, Text } from '@chakra-ui/react';
 import './link.css';
-
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-} from '@chakra-ui/react';
-import { useState } from 'react';
 import React from 'react';
 import { FaExternalLinkAlt, FaMailchimp, FaPhoneAlt } from 'react-icons/fa';
-// Import the Lorem component
 
 export default function ContactLinks() {
   return (
