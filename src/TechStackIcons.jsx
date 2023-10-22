@@ -18,7 +18,6 @@ export default function TechStackIcons() {
     { title: FaJsSquare },
     { title: FaReact },
     { title: SiTypescript },
-    { title: SiFirebase },
     { title: SiGithub },
     { title: SiBootstrap },
     { title: SiChakraui },

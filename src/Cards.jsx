@@ -21,6 +21,15 @@ export default function Cards() {
   const cardData = [
     {
       id: uuid(),
+      title: 'DreamLoud Gaming',
+      image: 'DreamLoud22.jpg',
+      text: "Created a website based on a fictional gaming organization DreamLoud. I'm a big fan of competitive esports which gave me the inspiration. This serves as website for the org that gives information about DreamLoud and it's members. Also has a shop with for fans of DreamLoud to buy Merchandise.",
+      codeLink: 'https://github.com/hefamba/DreamLoudGamingVite',
+      demoLink: 'https://dreamloud-gaming.netlify.app/',
+      techStack: ' Typescript, React, Bootstrap',
+    },
+    {
+      id: uuid(),
       title: 'Evolve Fitness',
       image: 'newEvolveFitness.jpg',
       text: "A responsive React web application built using Vite, Tailwind CSS, and other packages to promote a women's gym. This website showcases the various classes offered by the gym and provides contact information for potential customers.",
@@ -30,12 +39,12 @@ export default function Cards() {
     },
     {
       id: uuid(),
-      title: 'DreamLoud Gaming',
-      image: 'newDreamLoud-1.jpg',
-      text: "Created a website based on a fictional gaming organization DreamLoud. I'm a big fan of competitive esports which gave me the inspiration. This serves as website for the org that gives information about DreamLoud and it's members. Also has a shop with for fans of DreamLoud to buy Merchandise. Created with HTML5 and Bootstrap. VSCode as my text editor and all code was pushed to Github.",
-      codeLink: 'https://github.com/hefamba/DreamLoud_Gaming',
-      demoLink: 'https://hefamba.github.io/DreamLoud_Gaming/',
-      techStack: 'HTML, CSS, JavaScript, Bootstrap',
+      title: 'Virtural Resume Obinna',
+      image: 'newObinnaResume.jpg',
+      text: 'Created a Resume website for one of my close friends to help him stick out in job applications. A simple project that gave me the opportunity to experiment building using React.js, and google css framework Material UI.',
+      codeLink: 'https://github.com/hefamba/obinna_resume-netlify',
+      demoLink: 'https://resume-obinna-i.netlify.app/',
+      techStack: 'JavaScript, React, Material UI',
     },
     {
       id: uuid(),
@@ -45,15 +54,6 @@ export default function Cards() {
       codeLink: 'https://github.com/hefamba/movieAppJs',
       demoLink: 'https://hefamba.github.io/movieAppJs/',
       techStack: 'HTML, CSS, JavaScript',
-    },
-    {
-      id: uuid(),
-      title: 'Virtural Resume Obinna',
-      image: 'newObinnaResume.jpg',
-      text: 'Created a Resume website for one of my close friends to help him stick out in job applications. A simple project that gave me the opportunity to experiment building using React.js, and google css framework Material UI.',
-      codeLink: 'https://github.com/hefamba/obinna_resume-netlify',
-      demoLink: 'https://resume-obinna-i.netlify.app/',
-      techStack: 'JavaScript, React, Material UI',
     },
   ];
 
