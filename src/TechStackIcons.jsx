@@ -4,7 +4,6 @@ import { FaCss3, FaGithub, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
 import {
   SiBootstrap,
   SiChakraui,
-  SiFirebase,
   SiGithub,
   SiMui,
   SiTailwindcss,
