@@ -25,6 +25,13 @@ body {
   width: fit-content;
 }
 
+.footerLink {
+  color: whitesmoke;
+}
+.footerLink:hover {
+  color: #5d5d5d;
+}
+
 @media (min-width: 1200px) {
   .content-container {
     max-width: 1200px;

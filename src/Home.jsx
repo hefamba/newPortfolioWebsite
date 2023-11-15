@@ -6,6 +6,8 @@ import Contact from './Contact';
 import LoadingSpinner from './LoadingSpinner';
 import { Box, Flex } from '@chakra-ui/layout';
 import { Container } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
+import { FaCode } from 'react-icons/fa';
 import './App.css';
 import Interests from './Interests';
 
@@ -41,7 +43,14 @@ export default function Home() {
           </Container>
 
           <footer>
-            <h3>Portfolio Website created with React+Vite and Chakra-UI</h3>
+            <h3>Portfolio Website created with React+Vite and Chakra-UI </h3>
+            <Link href="https://github.com/hefamba/newPortfolioWebsite">
+              {' '}
+              <p className="footerLink" style={{ cursor: 'pointer' }}>
+                <FaCode />
+                Code Link
+              </p>
+            </Link>
           </footer>
         </>
       )}

@@ -58,7 +58,7 @@ export default function Cards() {
   ];
 
   return (
-    <Box pt={20} style={{ display: 'flex', flexDirection: 'column' }}>
+    <Box pt={10} style={{ display: 'flex', flexDirection: 'column' }}>
       <h1>Projects</h1>
       <SimpleGrid
         className="grid"
