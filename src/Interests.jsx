@@ -1,26 +1,34 @@
 import React from 'react';
 import './Container.css';
 import './Frame.css';
+import TikTokEmbed from './TikTokEmbed';
+import TikTokEmbed4 from './TikTokEmbed4';
 
 import { Box, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import TikTokEmbed2 from './TikTokEmbed2';
+import TikTokEmbed3 from './TikTokEmbed3';
+
+const tiktoks = [
+  {
+    code: <TikTokEmbed2 />,
+  },
+  {
+    code: <TikTokEmbed3 />,
+  },
+  {
+    code: <TikTokEmbed />,
+  },
+];
 
 export default function Interests() {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 1 }}
-      variants={{
-        hidden: { opacity: 0, y: -50 },
-        visible: { opacity: 1, y: 0 },
-      }}>
+    <motion.div>
       <h1 style={{ color: 'whitesmoke' }}>Interest</h1>
 
       <Box pt={10}>
         <Box className="container" id="intro">
-          <h1>PC Building</h1>
+          <h1 style={{ color: 'rgb(36, 126, 72)' }}>PC Building</h1>
           <Box
             style={{
               display: 'flex',
@@ -51,7 +59,6 @@ export default function Interests() {
                 <iframe
                   className="frameClass"
                   style={{
-                    border: 'solid black 1px',
                     boxShadow: '10px 15px 40px black',
                   }}
                   width="50%"
@@ -66,14 +73,43 @@ export default function Interests() {
           </Box>
         </Box>
       </Box>
-      {/* <Box pt={10}>
+      <Box pt={40}>
         <Box className="container" id="intro">
-          <h1>CONTENT CREATOR AND GAMING</h1>
+          <h1 style={{ color: 'rgb(36, 126, 72)' }}>
+            Content Creating and Gaming
+          </h1>
 
-          <Flex wrap={'wrap'}></Flex>
+          <Flex wrap={'wrap'} justify={'center'}>
+            <p>
+              My love for content creation burgeoned in 2013 when I first delved
+              into the world of short-form videos, crafting vines that sparked
+              my creative journey. Throughout my college years, the joy of
+              producing content intensified as I collaborated with a group of
+              friends on various video projects. This passion seamlessly
+              transitioned into the digital landscape of TikTok, Instagram,
+              YouTube, and Twitch. In 2020, amid the challenges the year
+              presented, I embraced the world of streaming on platforms like
+              Twitch and TikTok. This digital exploration bore fruit as I found
+              myself going viral multiple times on TikTok, amassing an engaged
+              audience of 47K+ followers. This viral success serves as a
+              testament to the resonance of my content and the vibrant community
+              that has grown around my creative endeavors. Armed with a
+              controller, I ventured into the realms of popular games such as
+              Halo, Call of Duty, Smash Brothers, and Apex Legends, transforming
+              my love for gaming into engaging and entertaining content. The
+              evolution of my content creation journey, from vines to the
+              dynamic platforms of today, showcases the enduring enthusiasm that
+              fuels my creative endeavors.
+            </p>
+            <Flex wrap={'wrap'}>
+              {tiktoks.map((tiktok) => (
+                <div style={{ padding: '10px' }}>{tiktok.code}</div>
+              ))}
+            </Flex>
+          </Flex>
         </Box>
       </Box>
-      <Box pt={10}>
+      {/* <Box pt={10}>
         <Box className="container" id="intro">
           <h1>BASKETBALL ENTHUSIEST</h1>
 
