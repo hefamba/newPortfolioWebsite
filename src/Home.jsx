@@ -35,8 +35,8 @@ export default function Home() {
           <Container maxW="1300px">
             <Flex direction={'column'} justify={'center'} align={'center'}>
               <Intro />
-              <Projects />
               <About />
+              <Projects />
               <Interests />
               <Contact />
             </Flex>

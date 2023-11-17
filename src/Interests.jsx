@@ -109,13 +109,68 @@ export default function Interests() {
           </Flex>
         </Box>
       </Box>
-      {/* <Box pt={10}>
+      <Box pt={10}>
         <Box className="container" id="intro">
-          <h1>BASKETBALL ENTHUSIEST</h1>
+          <h1 style={{ color: 'rgb(36, 126, 72)' }}>Ball is Life 🏀</h1>
+          <Box
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Flex wrap={'wrap'}>
+              <Box style={{ width: '100%' }}>
+                <p>
+                  Basketball has been more than just a pastime for me; it's been
+                  a lifelong passion that has shaped my identity. I've been
+                  hitting the hardwood since I can remember, playing the game at
+                  every stage of my life. During my college years, I took my
+                  skills to Nebraska Christian College, a small D3 institution,
+                  where I made a significant impact. In my freshman year, I
+                  proudly earned the Rookie of the Year honors and solidified my
+                  position as one of the top players in our division. Beyond the
+                  organized games, my love for basketball endures as I continue
+                  to lace up my sneakers for pick-up games at local gyms and
+                  parks. The NBA holds a special place in my heart, and while my
+                  favorite team is the Houston Rockets, my admiration for the
+                  game goes back to my childhood, where Derrick Rose was my
+                  ultimate basketball hero. His skill and passion for the game
+                  inspired me then and continue to influence my love for
+                  basketball to this day.
+                </p>
+              </Box>
+              <Box
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  gap: '20px',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center',
+                }}>
+                <iframe
+                  style={{ boxShadow: '10px 15px 40px black', gap: '3px' }}
+                  width="45%"
+                  height="315"
+                  src="https://www.youtube.com/embed/J33b1Ml-tUk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
 
-          <Flex wrap={'wrap'}></Flex>
+                <iframe
+                  style={{ boxShadow: '10px 15px 40px black' }}
+                  width="45%"
+                  height="315"
+                  src="https://www.youtube.com/embed/ex0m_V1aPj4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </Box>
+            </Flex>
+          </Box>
         </Box>
-      </Box> */}
+      </Box>
     </motion.div>
   );
 }
