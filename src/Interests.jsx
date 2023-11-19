@@ -8,6 +8,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import TikTokEmbed2 from './TikTokEmbed2';
 import TikTokEmbed3 from './TikTokEmbed3';
+import NBASearch from './NBASearch';
 
 const tiktoks = [
   {
@@ -169,6 +170,7 @@ export default function Interests() {
               </Box>
             </Flex>
           </Box>
+          <NBASearch />
         </Box>
       </Box>
     </motion.div>
