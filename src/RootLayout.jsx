@@ -93,6 +93,16 @@ export default function RootLayout() {
                     spy={true}
                     smooth={true}
                     duration={500}
+                    to="interest">
+                    Interest
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    className="navLink"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
                     to="contact">
                     Contact
                   </ScrollLink>

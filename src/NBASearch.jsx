@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Box } from '@chakra-ui/react';
 
 export default function NBASearch() {
   const [playerName, setPlayerName] = useState('');
@@ -41,25 +42,41 @@ export default function NBASearch() {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={playerName}
-        onChange={(e) => setPlayerName(e.target.value)}
-        placeholder="Enter NBA player name"
-      />
-      <button onClick={handleSearch}>Search</button>
+    <Box
+      color={'whitesmoke'}
+      backgroundColor={'rgb(36, 126, 72)'}
+      p={10}
+      borderRadius={20}>
+      <Box>
+        <h1>Search Current NBA Player Stats! 📈</h1>
+        <input
+          type="text"
+          value={playerName}
+          onChange={(e) => setPlayerName(e.target.value)}
+          placeholder="Enter NBA player name"
+          style={{ padding: '10px', borderRadius: '10px' }}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </Box>
 
       {playerStats && (
-        <div>
-          <h2>{playerStats.player.full_name} Stats</h2>
-          <p>Points per game: {playerStats.pts}</p>
-          <p>Assists per game: {playerStats.ast}</p>
-          {/* Add more stats as needed */}
-        </div>
+        <Box>
+          <h2>
+            {playerStats.full_name} Current stats for: {playerName}🏀
+          </h2>
+          <Box
+            display={'flex'}
+            justifyContent={'space-evenly'}
+            flexWrap={'wrap'}>
+            <h3>Points per game: {playerStats.pts}</h3>
+            <h3>Assists per game: {playerStats.ast}</h3>
+            <h3>Rebounds per game: {playerStats.reb}</h3>
+            <h3>Steals per game: {playerStats.stl}</h3>
+          </Box>
+        </Box>
       )}
 
       {error && <p>{error}</p>}
-    </div>
+    </Box>
   );
 }
