@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '@chakra-ui/icon';
-import { FaCss3, FaGithub, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
+import { FaCss3, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
 import {
   SiBootstrap,
   SiChakraui,
