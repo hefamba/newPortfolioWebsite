@@ -22,6 +22,35 @@ const tiktoks = [
   },
 ];
 
+const bball = [
+  {
+    frame: (
+      <iframe
+        style={{ boxShadow: '10px 15px 40px black' }}
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/J33b1Ml-tUk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    ),
+  },
+  {
+    frame: (
+      <iframe
+        style={{ boxShadow: '10px 15px 40px black' }}
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/ex0m_V1aPj4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    ),
+  },
+];
+
 export default function Interests() {
   return (
     <motion.div>
@@ -30,7 +59,7 @@ export default function Interests() {
 
         <Box pt={10}>
           <Box className="container" id="intro">
-            <h1 style={{ color: 'rgb(36, 126, 72)' }}>PC Building</h1>
+            <h1 style={{ color: 'rgb(36, 126, 72)' }}>PC Building 🖥️</h1>
             <Box
               style={{
                 display: 'flex',
@@ -79,7 +108,7 @@ export default function Interests() {
         <Box pt={40}>
           <Box className="container" id="intro">
             <h1 style={{ color: 'rgb(36, 126, 72)' }}>
-              Content Creating and Gaming
+              Content Creating and Gaming 🤳🏿
             </h1>
 
             <Flex wrap={'wrap'} justify={'center'}>
@@ -151,25 +180,9 @@ export default function Interests() {
                     flexWrap: 'wrap',
                     justifyContent: 'center',
                   }}>
-                  <iframe
-                    style={{ boxShadow: '10px 15px 40px black', gap: '3px' }}
-                    width="45%"
-                    height="315"
-                    src="https://www.youtube.com/embed/J33b1Ml-tUk"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-
-                  <iframe
-                    style={{ boxShadow: '10px 15px 40px black' }}
-                    width="45%"
-                    height="315"
-                    src="https://www.youtube.com/embed/ex0m_V1aPj4"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+                  {bball.map((vid) => (
+                    <div style={{ width: '45%' }}>{vid.frame}</div>
+                  ))}
                 </Box>
               </Flex>
             </Box>
