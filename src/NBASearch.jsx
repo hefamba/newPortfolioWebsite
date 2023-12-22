@@ -49,6 +49,7 @@ export default function NBASearch() {
       borderRadius={20}>
       <Box>
         <h1>Search Current NBA Player Stats! 📈</h1>
+        <p>Example: Kevin Durant</p>
         <input
           type="text"
           value={playerName}

@@ -25,96 +25,77 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <Box width={'100%'}>
-      <div
-        className={`root-layout`}
+    <Box width={'100%'} style={{ padding: '30px 0' }}>
+      <nav
         style={{
+          backgroundColor: ' #002407',
           width: '100%',
+          padding: '10px',
+          display: 'flex',
         }}>
-        <header
-          className={`${isSticky ? 'sticky-nav' : ''}`}
+        <ul
           style={{
             display: 'flex',
-            justifyContent: 'center',
-            backgroundColor: ' #002407',
+            justifyContent: 'space-evenly',
+            listStyle: 'none',
+            cursor: 'pointer',
+            width: '50%',
           }}>
-          <nav
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              width: '90%',
-              position: 'relative',
-              top: '-2px',
-            }}>
-            <h4 className="henry-dev">Henry.dev</h4>
-            <div style={{ width: '100%' }}>
-              <ul
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-
-                  width: '30vw',
-                  listStyle: 'none',
-                  cursor: 'pointer',
-                }}>
-                <li>
-                  <ScrollLink
-                    className="navLink"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    to="/">
-                    Home
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    className="navLink"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    to="about">
-                    About
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    className="navLink"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    to="projects">
-                    Projects
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    className="navLink"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    to="interest">
-                    Interest
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink
-                    className="navLink"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    to="contact">
-                    Contact
-                  </ScrollLink>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </header>
-        <main className="fade-in">
-          <Outlet />
-        </main>
-      </div>
+          <li>
+            <ScrollLink
+              className="navLink"
+              spy={true}
+              smooth={true}
+              duration={500}
+              to="/">
+              Home
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              className="navLink"
+              spy={true}
+              smooth={true}
+              duration={500}
+              to="about">
+              About
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              className="navLink"
+              spy={true}
+              smooth={true}
+              duration={500}
+              to="projects">
+              Projects
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              className="navLink"
+              spy={true}
+              smooth={true}
+              duration={500}
+              to="interest">
+              Interest
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              className="navLink"
+              spy={true}
+              smooth={true}
+              duration={500}
+              to="contact">
+              Contact
+            </ScrollLink>
+          </li>
+        </ul>
+      </nav>
+      <main className="fade-in">
+        <Outlet />
+      </main>
     </Box>
   );
 }

@@ -4,7 +4,7 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import LoadingSpinner from './LoadingSpinner';
-import { Box, Flex } from '@chakra-ui/layout';
+import { Flex } from '@chakra-ui/layout';
 import { Container } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/react';
 import { FaCode } from 'react-icons/fa';
@@ -32,7 +32,7 @@ export default function Home() {
         <LoadingSpinner />
       ) : (
         <>
-          <Container maxW="1300px">
+          <Container maxW="100%">
             <Flex direction={'column'} justify={'center'} align={'center'}>
               <Intro />
               <About />

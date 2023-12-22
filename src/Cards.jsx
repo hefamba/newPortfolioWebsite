@@ -10,7 +10,6 @@ import {
   CardBody,
   CardFooter,
   Text,
-  Button,
   Link,
 } from '@chakra-ui/react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';

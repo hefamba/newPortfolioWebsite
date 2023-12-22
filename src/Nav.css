@@ -1,9 +1,9 @@
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Remove single quotes here */
+  align-items: center;
   align-content: center;
-  /* border: 3px white solid; */
+
   position: relative;
   bottom: 30px;
 }
@@ -26,11 +26,11 @@ nav {
 }
 
 @media (max-width: 878px) {
-  .henry-dev {
-    display: none;
+  ul {
+    position: relative;
+    left: 45px;
   }
   li {
-    padding: 10px;
-    padding-right: 5px;
+    padding: 0 5px;
   }
 }

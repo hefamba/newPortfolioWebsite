@@ -19,7 +19,7 @@ export default function Contact() {
       }}>
       <Element name="contact">
         <Box pt={50} pb={50} className="contactBox" style={{ width: '100%' }}>
-          <Box className="container" p={1}>
+          <Box className="container">
             <h1 style={{ color: 'rgb(36, 126, 72)' }}>Contact me!</h1>
             <Flex justify={'space-evenly'}>
               <ContactLinks />

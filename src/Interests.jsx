@@ -3,7 +3,6 @@ import './Container.css';
 import './Frame.css';
 import TikTokEmbed from './TikTokEmbed';
 import { Element } from 'react-scroll';
-
 import { Box, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import TikTokEmbed2 from './TikTokEmbed2';
@@ -23,19 +22,6 @@ const tiktoks = [
 ];
 
 const bball = [
-  {
-    frame: (
-      <iframe
-        style={{ boxShadow: '10px 15px 40px black' }}
-        width="100%"
-        height="315"
-        src="https://www.youtube.com/embed/J33b1Ml-tUk"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    ),
-  },
   {
     frame: (
       <iframe
@@ -67,7 +53,10 @@ export default function Interests() {
                 alignItems: 'center',
               }}>
               <Flex wrap={'wrap'}>
-                <Box style={{ width: '100%' }}>
+                <Box
+                  style={{
+                    width: '100%',
+                  }}>
                   <p>
                     In 2020, my fascination with gaming PCs became a
                     transformative journey that led me into the heart of the
@@ -87,19 +76,25 @@ export default function Interests() {
                     innovation and performance converge.
                   </p>
                 </Box>
-                <Box style={{ width: '100%' }}>
-                  <iframe
-                    className="frameClass"
+                <Box display={'flex'} justifyContent={'center'} width={'100%'}>
+                  <Box
                     style={{
-                      boxShadow: '10px 15px 40px black',
-                    }}
-                    width="50%"
-                    height="315"
-                    src="https://www.youtube.com/embed/MK7TL2mfsW8"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+                      width: '50%',
+                      border: 'red solid 1px',
+                    }}>
+                    <iframe
+                      className="frameClass"
+                      style={{
+                        boxShadow: '10px 15px 40px black',
+                      }}
+                      width="100%"
+                      height="315"
+                      src="https://www.youtube.com/embed/MK7TL2mfsW8"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                  </Box>
                 </Box>
               </Flex>
             </Box>
