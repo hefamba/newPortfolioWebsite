@@ -1,38 +1,25 @@
 import React from 'react';
 import './Container.css';
 import './Frame.css';
-import TikTokEmbed from './TikTokEmbed';
 import { Element } from 'react-scroll';
 import { Box, Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import TikTokEmbed2 from './TikTokEmbed2';
-import TikTokEmbed3 from './TikTokEmbed3';
 import NBASearch from './NBASearch';
-
-const tiktoks = [
-  {
-    code: <TikTokEmbed2 />,
-  },
-  {
-    code: <TikTokEmbed3 />,
-  },
-  {
-    code: <TikTokEmbed />,
-  },
-];
+import { AspectRatio } from '@chakra-ui/react';
 
 const bball = [
   {
     frame: (
-      <iframe
-        style={{ boxShadow: '10px 15px 40px black' }}
-        width="100%"
-        height="315"
-        src="https://www.youtube.com/embed/ex0m_V1aPj4"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+      <AspectRatio maxW="560px" ratio={16 / 9}>
+        <iframe
+          style={{ border: 'black 2px solid' }}
+          width="100%"
+          src="https://www.youtube.com/embed/ex0m_V1aPj4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen="true"></iframe>
+      </AspectRatio>
     ),
   },
 ];
@@ -76,24 +63,22 @@ export default function Interests() {
                     innovation and performance converge.
                   </p>
                 </Box>
-                <Box display={'flex'} justifyContent={'center'} width={'100%'}>
-                  <Box
-                    style={{
-                      width: '50%',
-                      border: 'red solid 1px',
-                    }}>
-                    <iframe
-                      className="frameClass"
-                      style={{
-                        boxShadow: '10px 15px 40px black',
-                      }}
-                      width="100%"
-                      height="315"
-                      src="https://www.youtube.com/embed/MK7TL2mfsW8"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
+                <Box width={'100%'} display={'flex'} justifyContent={'center'}>
+                  <Box width={'50%'}>
+                    <AspectRatio maxW="560px" ratio={16 / 9}>
+                      <iframe
+                        className="frameClass"
+                        style={{
+                          border: 'black 2px solid',
+                        }}
+                        width="100%"
+                        height="315"
+                        src="https://www.youtube.com/embed/MK7TL2mfsW8"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen="true"></iframe>
+                    </AspectRatio>
                   </Box>
                 </Box>
               </Flex>
@@ -128,11 +113,6 @@ export default function Interests() {
                 vines to the dynamic platforms of today, showcases the enduring
                 enthusiasm that fuels my creative endeavors.
               </p>
-              <Flex wrap={'wrap'}>
-                {tiktoks.map((tiktok) => (
-                  <div style={{ padding: '10px' }}>{tiktok.code}</div>
-                ))}
-              </Flex>
             </Flex>
           </Box>
         </Box>
